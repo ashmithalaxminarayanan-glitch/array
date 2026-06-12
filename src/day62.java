@@ -1,4 +1,4 @@
-public class Day5marks {
+public class Day62    {
 
     static class Student {
         String name, dept;
