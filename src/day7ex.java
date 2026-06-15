@@ -58,7 +58,7 @@ public class day7ex {
         }
 
         public static void main(String[] args) {
-            BankEmployee bankEmployee = new BankEmployee("Lasika","2811",40000);
+            BankEmployee bankEmployee = new BankEmployee("Ashmitha","2811",40000);
             bankEmployee.solveProblem();
             bankEmployee.work();
 
