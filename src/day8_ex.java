@@ -1,6 +1,4 @@
 public class day8_ex {
-    public class Day8_ex {
-
 
         sealed interface LoginResult permits LoginSuccess, LoginFailure, LoginLoading {
 
@@ -12,7 +10,7 @@ public class day8_ex {
 
         }
 
-        record Loginloading(String expectedTime)  implements LoginResult {
+        record LoginLoading(String expectedTime)  implements LoginResult {
 
         }
 
@@ -24,22 +22,19 @@ public class day8_ex {
             switch (result) {
                 case LoginSuccess success -> System.out.println("Login Success at : " + success.time());
                 case LoginFailure failure -> System.out.println("Login Failure because of " + failure.reason());
-                case LoginLoading -> System.out.println("Login Loading, " + loading.expectedTime());
+                case LoginLoading loading-> System.out.println("Login Loading, " + loading.expectedTime());
             }
         }
 
         static void main() {
-            LoginResult LogintSuccess = new LoginSuccess("2026-06-13:06:13:53");
+            LoginResult LoginSuccess = new LoginSuccess("2026-06-13:06:13:53");
             LoginResult LoginFailure = new LoginFailure("network issue");
-            LoginResult LoginPending = new LoginPending("Check after 7 hours");
+            LoginResult LoginLoading = new LoginLoading("Check after 7 hours");
 
             handleLogin(LoginSuccess);
             handleLogin(LoginFailure);
             handleLogin(LoginLoading);
-
-
-
         }
 
     }
-}
+
