@@ -10,8 +10,7 @@ public class day11 {
         person.put("Aravindh",67);
         person.put("Ramesh",90);
 
-        System.out.println(person.get("percent"));
-        person.entrySet().forEach(entry ->{
+                          person.entrySet().forEach(entry ->{
             System.out.println(entry.getKey() + " : " + entry.getValue());
         });
     }
